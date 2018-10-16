@@ -2,8 +2,12 @@ import React, { Component } from 'react';
 
 const App = () => (
     <Amount>
-        <Pound amount={amount} />
-        <Euro amount={amount} />
+        {() => (
+            <div>
+                <Pound amount={amount} />
+                <Euro amount={amount} />
+            </div>
+        )}
     </Amount>
 );
 
@@ -36,7 +40,7 @@ class Amount extends Component {
                     -
                 </button>
 
-                {this.props.children}
+                {this.props.children()}
             </div>
         );
     }
