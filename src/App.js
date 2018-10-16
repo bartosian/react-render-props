@@ -1,3 +1,5 @@
+import React, { Component } from 'react';
+
 const App = () => <Amount />;
 
 class Amount extends Component {
@@ -32,3 +34,9 @@ class Amount extends Component {
         );
     }
 }
+
+export default App;
+
+const Euro = ({ amount }) => <p>Euro: {amount * 0.86}</p>;
+
+const Pound = ({ amount }) => <p>Pound: {amount * 0.76}</p>;
