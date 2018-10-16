@@ -1,6 +1,13 @@
 import React, { Component } from 'react';
 
-const App = () => <Amount />;
+const App = () => (
+    <div>
+        <Amount />
+
+        <Euro amount={amount} />
+        <Pound amount={amount} />
+    </div>
+);
 
 class Amount extends Component {
     constructor(props) {
