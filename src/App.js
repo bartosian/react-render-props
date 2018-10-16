@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 const App = () => (
     <Amount>
-        {() => (
+        {(amount) => (
             <div>
                 <Pound amount={amount} />
                 <Euro amount={amount} />
@@ -40,7 +40,7 @@ class Amount extends Component {
                     -
                 </button>
 
-                {this.props.children()}
+                {this.props.children(this.state.amount)}
             </div>
         );
     }
